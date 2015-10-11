@@ -1,11 +1,11 @@
 db:
   extends:
-    file: docker-command.yml
+    file: docker-compose.yml
     service: db
 
 odoo:
   extends:
-    file: docker-command.yml
+    file: docker-compose.yml
     service: odoo
   ports:
     - '80:8069'
