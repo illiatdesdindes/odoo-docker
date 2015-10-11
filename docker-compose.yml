@@ -1,12 +1,12 @@
 db:
-  build: ./postgres
+  image: postgres
   volumes:
     - ./data/postgres:/var/lib/postgresql/data
   env_file: .env
 
 
 odoo:
-  build: ./
+  image: odoo
   links:
     - db
   ports:
