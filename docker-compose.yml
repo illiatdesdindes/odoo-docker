@@ -1,5 +1,7 @@
 db:
   build: ./postgres
+  volumes:
+    - ./data/postgres:/var/lib/postgresql/data
   environment:
     POSTGRES_USER: odoo
     POSTGRES_PASSWORD: odoo
