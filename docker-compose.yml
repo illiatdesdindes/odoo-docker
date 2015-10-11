@@ -1,0 +1,13 @@
+db:
+  build: ./postgres
+  environment:
+    POSTGRES_USER: odoo
+    POSTGRES_PASSWORD: odoo
+
+
+odoo:
+  build: ./
+  links:
+    - db
+  ports:
+    - '8069:8069'
